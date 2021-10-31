@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: rgb(202, 214, 147);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);  
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+nav ul li{
+    padding: 0 15px;
+}
+.log-sign{
+    margin: auto;
+    margin-right: 20px;
+    color: white;
+}
+.log-sign ul li a{
+    padding: 12px;
+}
+.log-sign ul li a:hover{
+    cursor: pointer;
+    background-color: rgb(202, 214, 147);
+    color: black;
+    border-radius: 15px;
+    padding: 12px;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 100%;
+   border-radius: 15px;
+   padding: 34px;
+   background-image: url('bg.jpg');
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+
+
+/* .songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+} */
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+/* .songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+} */
+.songItemContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.show{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.hide{
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+.timestamp img{
+    width: 30px;
+    padding: 5px;
+}
+.songName,.songlistpLay,.timestamp{
+    color: black;
+}
+.card{
+    padding: 5px;
+    float: left;
+    margin-right: 10px;
+    height: 280px;
+    border-radius: 15px;
+  
+}
+.card-img, .card-img-bottom, .card-img-top {
+    width: 85%; 
+    height: 50%;
+    margin: auto;
+}
+.play{
+    display: flex;
+    margin: auto;
+    margin-right: 5px;
+}
+.card:hover .play{
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.songItemPlay{
+    margin-left: 25px;
+}
+#previous,#next{
+    color:  #71be75
+}
+#masterPlay{
+    color:rgb(202, 214, 147) ;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: #cad693;
+    width: 200px;
+    height:5px;
+    border-radius: 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color:#71be75;
+    width: 8px;
+    height: 20px;
+    border-radius: 15px;
+}
+.fa-play,.fa-pause{
+   color:#3cff00 ;
+   transform: 1s;
+}
+
+.fa-play:hover,.fa-pause:hover{
+    color: rgb(15, 15, 15);
+    transform:scale(1.5);
+}
+.bottom{
+    transition-timing-function: ease-in;
+}
+@media (min-width:440px) {
+    .songItem,.card{
+        align-items: center;
+        width: 200px;
+    }
+
+}
+@media (max-width:488px) {
+    .songItem,.card{
+        align-items: center;
+        width: 85%;
+        height: auto;
+    }
+    .card-img-top{
+        height: 150px;
+        width: 80%;
+    }
+    .songItemContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand{
+        margin-left: -40px;
+    }
+    .log-sign{
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    nav ul li{
+        padding: 0 10px;
+    }
+   
+}
