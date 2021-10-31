@@ -12,24 +12,24 @@ let bottom=document.getElementById("bottom")
 let songItemContainer=document.querySelector('.songItemContainer');
 
 let songs = [
-    {songName: "BurjKhalifa- Lakshmi Bomb", filePath: "songs/1.mp3", coverPath: "covers/Burj Khalifa.jpg"},
-    {songName: "Khairiyat- Kabir Singh", filePath: "songs/2.mp3", coverPath: "covers/Khairiyat.jpg"},
-    {songName: "Tera Ban Jaunga", filePath: "songs/5.mp3", coverPath: "covers/Tera Ban Jaunga.jpg"},
-    {songName: "Tera Jaisa Yaar Kahan", filePath: "songs/6.mp3", coverPath: "covers/Tere jaise yaar.jpg"},
-    {songName: "Nashe Se Chad Gayi", filePath: "songs/3.25", coverPath: "covers/nashe se.jpg"},
-    {songName: "Shape Of You-Ed Sheeran", filePath: "songs/4.51", coverPath: "covers/shape of u.jpg"},
-    {songName: "Dil Diya Galan-Tiger Zinda Hai", filePath: "songs/7.39", coverPath: "covers/dil diya.jpg"},
-    {songName: "Pal", filePath: "songs/8.23", coverPath: "covers/pal.jpg"},
-    {songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/9.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Cielo - Huma-Huma", filePath: "songs/18.mp3", coverPath: "covers/2.jpg"},
-    {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/11.mp3", coverPath: "covers/3.jpg"},
-    {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/12.mp3", coverPath: "covers/4.jpg"},
-    {songName: "Janji-Heroes-Tonight", filePath: "songs/11.mp3", coverPath: "covers/5.jpg"},
-    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/12.mp3", coverPath: "covers/6.jpg"},
-    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/10.mp3", coverPath: "covers/7.jpg"},
-    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/14.mp3", coverPath: "covers/8.jpg"},
-    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/18.mp3", coverPath: "covers/9.jpg"},
-    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/16.mp3", coverPath: "covers/10.jpg"}
+    {songName: "BurjKhalifa- Lakshmi Bomb", filePath: "songs/1.mp3", coverPath: "covers/Burj Khalifa.jpg",duration:"03:25"},
+    {songName: "Khairiyat- Kabir Singh", filePath: "songs/2.mp3", coverPath: "covers/Khairiyat.jpg",duration:"04:40"},
+    {songName: "Tera Ban Jaunga", filePath: "songs/5.mp3", coverPath: "covers/Tera Ban Jaunga.jpg",duration:"03:56"},
+    {songName: "Tera Jaisa Yaar Kahan", filePath: "songs/6.mp3", coverPath: "covers/Tere jaise yaar.jpg",duration:"02:41"},
+    {songName: "Nashe Se Chad Gayi", filePath: "songs/3.25", coverPath: "covers/nashe se.jpg",duration:"03:51"},
+    {songName: "Shape Of You-Ed Sheeran", filePath: "songs/4.51", coverPath: "covers/shape of u.jpg",duration:"03:55"},
+    {songName: "Dil Diya Galan-Tiger Zinda Hai", filePath: "songs/7.39", coverPath: "covers/dil diya.jpg",duration:"04:20"},
+    {songName: "Pal", filePath: "songs/8.23", coverPath: "covers/pal.jpg",duration:"04:07"},
+    {songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/9.mp3", coverPath: "covers/1.jpg",duration:"03:50"},
+    {songName: "Cielo - Huma-Huma", filePath: "songs/18.mp3", coverPath: "covers/2.jpg",duration:"02:33"},
+    {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/11.mp3", coverPath: "covers/3.jpg",duration:"04:33"},
+    {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/12.mp3", coverPath: "covers/4.jpg",duration:"04:27"},
+    {songName: "Janji-Heroes-Tonight", filePath: "songs/11.mp3", coverPath: "covers/5.jpg",duration:"03:28"},
+    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/12.mp3", coverPath: "covers/6.jpg",duration:"04:27"},
+    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/10.mp3", coverPath: "covers/7.jpg",duration:"04:33"},
+    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/14.mp3", coverPath: "covers/8.jpg",duration:"04:25"},
+    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/18.mp3", coverPath: "covers/9.jpg",duration:"03:15"},
+    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/16.mp3", coverPath: "covers/10.jpg",duration:"02:25"}
     
 ]
 let i=0
@@ -37,11 +37,11 @@ let duration
 const addDOM=()=>{
     
     for(i=0;i<songs.length;i++){ 
-        duration=new Audio(songs[i].filePath)
+        console.log(songs[i].duration);
     html=` <div class="card songItem my-2">
     <img src="${songs[i].coverPath}" class="card-img-top" alt="1" height="100px" >
     <span class="card-body songName">${songs[i].songName}</span>
-    <div class="card-text songlistplay"><div class="timestamp"><img src="time.png">${parseInt(duration.duration)}<i id="${i}" class="fa songItemPlay fa-play"></i></div></div>
+    <div class="card-text songlistplay"><div class="timestamp"><img src="time.png">${songs[i].duration}<i id="${i}" class="fa songItemPlay fa-play"></i></div></div>
     </div> `
     songItemContainer.innerHTML +=html;
     }
