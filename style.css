@@ -298,7 +298,7 @@ input[type=text]:focus{
 .box-form {
     width: 550px;
     margin: 0 auto;
-    background: #f8f8f8;
+    background: #ffffff;
     border-radius: 15px;
     display: flex;
     justify-content: center;
