@@ -333,7 +333,7 @@ input[type=text]:focus{
     font-size: 16px;
     border: none;
     outline: none;
-    border-bottom: 2px solid #B0B3B9;
+    border-bottom: 2px solid #1afa70;
   }
   .box-form .right .remember-me--forget-password {
     display: flex;
