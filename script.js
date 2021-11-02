@@ -1,5 +1,3 @@
-
-// Initialize the Variables
 let songIndex = 0;
 let audioElement = new Audio();
 let masterPlay = document.getElementById('masterPlay');
@@ -47,14 +45,6 @@ const addDOM=()=>{
     }
 }
 addDOM();
-// songItems.forEach((element, i)=>{ 
-//     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
-//     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
-//     addDOM(i);
-// })
- 
-
-// Handle play/pause click
 masterPlay.addEventListener('click', (e)=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
@@ -71,7 +61,6 @@ masterPlay.addEventListener('click', (e)=>{
 
     }
 })
-// Listen to Events
 audioElement.addEventListener('timeupdate', ()=>{ 
     // Update Seekbar
     progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 

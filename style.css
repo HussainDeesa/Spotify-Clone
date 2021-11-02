@@ -101,25 +101,6 @@ nav ul li{
     cursor: pointer;
 }
 
-
-/* .songItem{
-    height: 50px;
-    display: flex;
-    background-color: white;
-    
-    color: black;
-    margin: 12px 0;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 34px;
-}
-
-.songItem img{
-    width: 43px;
-    margin: 0 23px;
-    border-radius: 34px;
-} */
-
 .timestamp{
     margin: 0 23px;
 }
@@ -128,16 +109,6 @@ nav ul li{
     cursor: pointer;
 }
 
-/* .songInfo{
-    position: absolute;
-    left: 10vw;
-    font-family: 'Varela Round', sans-serif;
-}
-
-.songInfo img{
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
-} */
 .songItemContainer{
     display: flex;
     flex-wrap: wrap;
@@ -224,10 +195,13 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 @media (max-width:488px) {
+    .container{
+        width: 95%;
+    }
     .songItem,.card{
         align-items: center;
-        width: 85%;
-        height: auto;
+        width: 80%;
+        height: 250px;
     }
     .card-img-top{
         height: 150px;
@@ -249,51 +223,6 @@ input[type="range"]::-webkit-slider-thumb {
     }
    
 }
-
-
-/* Login.html style */
-/* .login-container{
-    font-family: 'Varela Round', sans-serif;
-    width: 500px;
-    height: 400px;
-    background-color: white;
-    color: black;
-    margin: auto;
-    padding: 10px;
-    border-radius: 15px;
-}
-.login-details{
-    margin-top: 25px;
-}
-input[type=text],input[type=password]{
-    margin-left: 20px;
-    border: none;
-    border-bottom: 1px solid black;
-    
-}
-input[type=text]:focus{
-    border: none;
-}
-
-::-webkit-input-placeholder{
-    padding: 5px;
-    font-size: 12px;
-    color: rgba(255, 1, 35, 0.5);
-}
-.btn-submit{
-    border: none;
-    margin-top: 25px;
-    padding: 7px;
-    border-radius: 7px;
-    background-color: #71be75;
-}
-.btn-submit:hover{
-    cursor:pointer;
-    background-color: #cad693
-} */
-
-
-
   
 .box-form {
     width: 550px;
