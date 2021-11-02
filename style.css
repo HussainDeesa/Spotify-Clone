@@ -201,7 +201,7 @@ input[type="range"]::-webkit-slider-thumb {
     .songItem,.card{
         align-items: center;
         width: 80%;
-        height: 250px;
+        height: 270px;
     }
     .card-img-top{
         height: 150px;
