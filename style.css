@@ -134,7 +134,8 @@ nav ul li{
     margin-right: 10px;
     height: 280px;
     border-radius: 15px;
-  
+    /* box-shadow: 0 0 20px 6px #090b6f85; */
+    box-shadow: 0 0 6px 2px #b9aaaa;
 }
 .card-img, .card-img-bottom, .card-img-top {
     width: 85%; 
@@ -179,7 +180,10 @@ input[type="range"]::-webkit-slider-thumb {
    color:#3cff00 ;
    transform: 1s;
 }
-
+.fa-pause{
+    color: black;
+    transform: scale(1.5);
+}
 .fa-play:hover,.fa-pause:hover{
     color: rgb(15, 15, 15);
     transform:scale(1.5);
@@ -368,3 +372,18 @@ input[type="range"]::-webkit-slider-thumb {
         font-size: 14px;
     }
   }
+
+
+
+
+  /* Sign-up */
+
+.small{
+    position: absolute;
+    color: rgb(243, 16, 16);
+    font-size: 12px;
+
+}
+.hidden{
+    display: none;
+}
