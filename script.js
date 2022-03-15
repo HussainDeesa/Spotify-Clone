@@ -46,13 +46,26 @@ const addDOM = () => {
 addDOM();
 songItemPlay = document.querySelectorAll('.songItemPlay')
 masterPlay.addEventListener('click', (e) => {
-    audioElement.pause();
-    masterPlay.classList.remove('fa-pause-circle');
-    masterPlay.classList.add('fa-play-circle');
-    gif.style.opacity = 0;
-    bottom.classList.add('hide')
-    songItemPlay[songIndex].classList.remove('fa-pause')
-    songItemPlay[songIndex].classList.add('fa-play')
+    if(masterPlay.classList.contains('fa-pause-circle')){
+        audioElement.pause();
+        masterPlay.classList.remove('fa-pause-circle');
+        masterPlay.classList.add('fa-play-circle');
+        gif.style.opacity = 0;
+        songItemPlay[songIndex].classList.remove('fa-pause')
+        songItemPlay[songIndex].classList.add('fa-play')    
+    }
+    else{
+        audioElement.play();
+        masterPlay.classList.add('fa-pause-circle');
+        masterPlay.classList.remove('fa-play-circle');
+        gif.style.opacity = 1;
+        songItemPlay[songIndex].classList.add('fa-pause')
+        songItemPlay[songIndex].classList.remove('fa-play')
+    
+    }
+    // bottom.classList.add('hide')
+    // songItemPlay[songIndex].classList.remove('fa-pause')
+    // songItemPlay[songIndex].classList.add('fa-play')
 })
 
 audioElement.addEventListener('timeupdate', () => {
@@ -164,5 +177,4 @@ document.getElementById('previous').addEventListener('click', () => {
 })
 
 
-// SignUp Page
 
