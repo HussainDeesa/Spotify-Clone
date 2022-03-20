@@ -8,6 +8,7 @@
         <title>Spotify</title>
         <link rel="icon" type="image/x-icon" href="favicon.png">
         <link rel="stylesheet" href="style.css">
+
         </head>
 <body>
     <nav>
@@ -17,8 +18,16 @@
             </div>
             <div class="log-sign">
              <ul>
-                    <li class="login"><a href="login.html">Log In</a></li>
-                    <li class="signup"><a href="signup.html"> Sign Up</a></li>
+                    <li class="name" id="user-name"> </li>
+                    <li class="logout"> Logout</a></li> 
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" id="user-name" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li class="logout" id="logout">Logout</li>
+                        </ul>
+                      </li>
                 </ul>
             </div>
         </ul>
@@ -36,8 +45,7 @@
     <div class="bottom hide" id="bottom">
         <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
         <div class="icons">
-            <!-- fontawesome icons -->
-            <i class="fas fa-2x fa-step-backward" id="previous"></i>
+             <i class="fas fa-2x fa-step-backward" id="previous"></i>
             <i class="far fa-2x fa-pause-circle" id="masterPlay"></i>
             <i class="fas fa-2x fa-step-forward" id="next"></i> 
         </div>
@@ -46,8 +54,9 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script src="loggedin.js"></script>
+    <script src="script.js"></script>
+</body> 
+ </html>
 

@@ -1,3 +1,4 @@
+const getSongs=()=>{
 let songIndex = 0;
 let audioElement = new Audio();
 let masterPlay = document.getElementById('masterPlay');
@@ -5,9 +6,10 @@ let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
 // gif.style.opacity = 0;
 let masterSongName = document.getElementById('masterSongName');
-let songItems = Array.from(document.getElementsByClassName('songItem'));
+// let songItems = Array.from(document.getElementsByClassName('songItem'));
 let bottom = document.getElementById("bottom")
 let songItemContainer = document.querySelector('.songItemContainer');
+
 let songItemPlay
 let songs = [
     { songName: "BurjKhalifa- Lakshmi Bomb", filePath: "songs/1.mp3", coverPath: "covers/Burj Khalifa.jpg", duration: "03:25" },
@@ -176,5 +178,24 @@ document.getElementById('previous').addEventListener('click', () => {
     songItemPlay[songIndex].classList.add('fa-pause')
 })
 
+}
+const getUser=async (e)=>{
+    const response = await fetch(`api/auth/getuser`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'auth-token':localStorage.getItem('token')
+        },
+    })
+    const json = await response.json()
+    if (json.success) {
+        getSongs()
+    }  
+}
 
-
+if(localStorage.getItem("token")){
+    getUser()
+}
+if (localStorage.getItem('token') === null) {
+    window.location.href = '/login.html'
+}
