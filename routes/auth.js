@@ -14,7 +14,7 @@ let user_name;
 //ROUTE:1 Create a User POST "/api/auth/createuser"
 
 router.post('/createuser', [
-    body('name', 'Enter valid name of minimum 3 characters').isLength({ min: 5 }),
+    body('name', 'Enter valid name of minimum 3 characters').isLength({ min: 3 }),
     body('email', 'Enter valid email').isEmail(),
     body('password', 'Enter a password with atleat 7 characters').isLength({ min: 7 })
 ], async (req, res) => {
